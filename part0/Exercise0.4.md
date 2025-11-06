@@ -1,23 +1,23 @@
 # New Note Diagram
 ```mermaid
 sequenceDiagram
-    participant Client
+    participant Browser
     participant Server
 
-    Client->>Server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-    Server-->>Client: Page Redirect Request to Location: /exampleapp/notes
-    Note right of Client: The server adds new note in the data.json and requests client to redirect the page to new location
+    Browser->>Server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    Server-->>Browser: Page Redirect Request to Location: /exampleapp/notes
+    Note right of Browser: The server adds new note in the data.json and requests Browser to redirect the page to new location
 
-    Client->>Server: GET https://studies.cs.helsinki.fi/exampleapp/notes
-    Server-->>Client: HTML document
+    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    Server-->>Browser: HTML document
 
-    Client->>Server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
-    Server-->>Client: the css file
+    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    Server-->>Browser: the css file
 
-    Client->>Server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
-    Server-->>Client: the javascript file
-    Note right of Client: The browser starts executing the javascript code that fetches the JSON
+    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    Server-->>Browser: the javascript file
+    Note right of Browser: The browser starts executing the javascript code that fetches the JSON
 
-    Client->>Server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
-    Server-->>Client: the data.json file
-    Note right of Client: The browser executes the callback function that renders the notes
+    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    Server-->>Browser: the data.json file
+    Note right of Browser: The browser executes the callback function that renders the notes
