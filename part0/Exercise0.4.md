@@ -1,4 +1,4 @@
-# ExampleApp Sequence Diagram
+# New Note Diagram
 ```mermaid
 sequenceDiagram
     participant Client
